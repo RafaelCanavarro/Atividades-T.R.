@@ -1,147 +1,182 @@
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    font-family: sans-serif;
+/* O CSS reset foi feito de forma incompleta e com a tag errada. */
+/* o * significa estilizar TODOS os elementos da página. */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0; /* Esta propriedade tem que estar no * e não em body */
+  padding: 0; /* Esta propriedade tem que estar no * e não em body */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  font-family: sans-serif; /* Este font-family pode ser movido para * {} */
+}
+
+/* Estilização de texto não deve estar nesta tag, somente na tag de texto */
 .container {
-    text-align: center;
+  text-align: center;
 }
-.logo{
-    width: 200px;
-    margin-bottom: -140px;
+
+/* Ok */
+.logo {
+  width: 200px;
+  margin-bottom: -140px;
 }
+
+/* Faltou definir propriedades de tamanho de fonte, espessura e familia da fonte. */
 .text {
-    color: #000000;
-    letter-spacing: 1px;
-    margin: 10px;
+  color: #000000;
+  letter-spacing: 1px;
+  margin: 10px;
 }
+
+/* Parcialmente ok */
 .page {
-    width: 350px;
-    background: #fafafa;
-    border-radius: 5px;
-    padding-bottom: 15px;
+  width: 350px; /* Utilizar padding para criar o container ao invés de definir um tamanho fixo */
+  background: #fafafa;
+  border-radius: 5px;
+  padding-bottom: 15px;
 }
+
+/* Este elemento não foi utilizado no HTML, favor remover. */
 .title {
-    position: static;
-    width: 100px;
-    height: 150px;
+  position: static;
+  width: 100px;
+  height: 150px;
 }
+
+/* Ok - Problemas de replicação somente, mas nada muito importante */
 form {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 form input {
-    margin-bottom: 5px;
-    border: 1px solid rgba(0,0,0,0,4);
-    border-radius: 3px;
-    outline: none;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0, 4);
+  border-radius: 3px;
+  outline: none;
+  /* Alterar estilização da borda para ficar mais fiel ao instagram */
 }
+
 form input:focus {
-    border: 1px solid rgba(0,0,0,0,7);
-    background: #efefef;
+  border: 1px solid rgba(0, 0, 0, 0, 7);
+  background: #efefef;
 }
-form input[type="text"], form input[type="password"]{
-    padding-left: 10px;
-    position: relative;
-    height: 35px;
-    font-size: 17px;
+
+form input[type="text"],
+form input[type="password"] {
+  padding-left: 10px;
+  position: relative;
+  height: 35px;
+  font-size: 17px;
 }
-input::placeholder{
-    font-weight: normal;
-    font-size: 13px;
-    transition: 0.3s ease;
+
+input::placeholder {
+  font-weight: normal;
+  font-size: 13px;
+  transition: 0.3s ease;
 }
-input:focus::placeholder{
-    position: absolute;
-    font-size: 10px;
-    transform: translateY(-13px);
+
+input:focus::placeholder {
+  position: absolute;
+  font-size: 10px;
+  transform: translateY(-13px);
 }
-form button{
-    border: none;
-    background: #043fff;
-    padding: 5px 0;
-    margin-top: 5px;
-    color: #fff;
-    border-radius: 3px;
-    font-weight: bold;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    outline: none;
-    cursor: pointer;
+
+form button {
+  border: none;
+  background: #043fff;
+  padding: 5px 0;
+  margin-top: 5px;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
 }
-form button:active{
-    background: #2c58fe;
-    transform: scale(0.995);
+
+form button:active {
+  background: #2c58fe;
+  transform: scale(0.995);
 }
-form .option{
-    color: #5a5a5a;
-    margin: 10px 0;
-    font-weight: bold;
-    position: relative;
+
+form .option {
+  color: #5a5a5a;
+  margin: 10px 0;
+  font-weight: bold;
+  position: relative;
 }
-form .option:before{
-    position: absolute;
-    content: '';
-    width: 37%;
-    height: 2px;
-    background: #b6b6b6;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50px;
+
+form .option:before {
+  position: absolute;
+  content: "";
+  width: 37%;
+  height: 2px;
+  background: #b6b6b6;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50px;
 }
-form .option:after{
-    position: absolute;
-    content: '';
-    width: 37%;
-    height: 2px;
-    background: #b6b6b6;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50px;
+
+form .option:after {
+  position: absolute;
+  content: "";
+  width: 37%;
+  height: 2px;
+  background: #b6b6b6;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50px;
 }
-.facel{
-    width: 23px;
-    margin-bottom: -4px;
-    transform: translateX(-10px);
+
+.facel {
+  width: 23px;
+  margin-bottom: -4px;
+  transform: translateX(-10px);
 }
-.fblink{
-    margin-top: 15px;
-    width: 100%;
+.fblink {
+  margin-top: 15px;
+  width: 100%;
 }
-.fblink a{
-    text-decoration: none;
-    font-weight: bold;
-    color: #021897;
+.fblink a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #021897;
 }
-.fblink-id a{
-    text-decoration: none;
-    color: #025fd2;
-    font-size: 12px;
-    font-weight: 500;
+.fblink-id a {
+  text-decoration: none;
+  color: #025fd2;
+  font-size: 12px;
+  font-weight: 500;
 }
-.page .signup{
-    position: relative;
-    border: 1px solid #b6b6b6;
-    border-radius: 2px;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 30px;
+.page .signup {
+  position: relative;
+  border: 1px solid #b6b6b6;
+  border-radius: 2px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
 }
-.signup a{
-    text-decoration: none;
-    margin-left: 5px;
-    color: #000aff;
-    font-weight: bold;
+.signup a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: #000aff;
+  font-weight: bold;
 }

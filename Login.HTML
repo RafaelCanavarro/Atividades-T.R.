@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<!-- O nome do arquivo html não deve ter letra maiúscula -->
+<!-- login.html | a extensão nunca vai ser .HTML, somente .html -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Instagram/login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Ok -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Título deveria ser Instagram -->
+  <title>Instagram/login</title>
 </head>
 
 <body>
 
-<div class="container">
+  <!-- Ok -->
+  <div class="container">
+    <!-- Texto deve estar dentro de uma tag de texto -->
+    <!-- h1,h2,h3,h4,h5,h6,span,p,etc... -->
     <div class="text">Faça login para continuar</div>
-        <div class="page">
-            <img src="img/Instagram-Logo.png" alt="logo-instagram" class="logo">
-          <div class="title"> </div>
 
-          <form>
-            <input type="text" placeholder="Telefone, nome de usuario ou email">
-            <input type="password" placeholder="Senha">
-            <button> Entrar </button>
-            <div class="option"> OU </div>
-          </form> 
+    <!-- Usar o nome container para divs que envolvem vários elementos -->
+    <div class="page">
+      <!-- Ok -->
+      <img src="img/Instagram-Logo.png" alt="logo-instagram" class="logo">
 
-          <div class="fblink">
-            <a href="#"> <img src="img/fa-facebook.png" alt="Facebook" class="facel">Entrar com o Facebook </a>
-          </div>
-          
-          <div class="forget-id">
-            <a href="#"> Esqueceu a senha? </a>
-          </div>
+      <!-- Não deixe tags ou elementos que não estão sendo utilizados -->
+      <div class="title"> </div>
 
-          <div class="signup">
-            <p>Não possui uma conta? <a href="#">Cadastra-se</a></p>
-          </div>
+      <!-- Ok -->
+      <form>
+        <input type="text" placeholder="Telefone, nome de usuario ou email">
+        <input type="password" placeholder="Senha">
+        <!-- Não utilizar espaços dentro do conteúdo de uma tag -->
+        <button> Entrar </button>
+        <div class="option"> OU </div>
+      </form>
+
+      <div class="fblink">
+        <!-- Você precisa separar cada elemento em uma tag pai que envolva o conteúdo -->
+        <!-- O certo seria você colocar o "Entrar com o Facebook" 
+          em uma tag de texto que citei lá em cima. -->
+        <a href="#"> <img src="img/fa-facebook.png" alt="Facebook" class="facel">Entrar com o Facebook </a>
+      </div>
+
+      <div class="forget-id">
+        <!-- Mesmo esquema, adiciona o texto em uma tag de texto -->
+        <a href="#"> Esqueceu a senha? </a>
+      </div>
+
+      <!-- Ok -->
+      <div class="signup">
+        <!-- Ok -->
+        <p>Não possui uma conta? <a href="#">Cadastra-se</a></p>
+      </div>
     </div>
-</div>
+  </div>
 
 </body>
+
 </html>
